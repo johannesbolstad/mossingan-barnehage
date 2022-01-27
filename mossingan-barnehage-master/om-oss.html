@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="no" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mossingan barnehage</title>
+    <link rel="stylesheet" href="CSS/master-style.css">
+    <link rel="stylesheet" href="CSS/style-om-oss.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kaushan+Script">
+    <link rel="shortcut icon" type="image/png" href="img/icons/favicon.png">
+  </head>
+  <body>
+    <div class="content-wrap">
+      <div class=vår_header></div>
+      <div class="om-oss">
+        <div class="forsidebilde">
+          <h1>Om oss</h1>
+          <img src="img/parralax/blad.png" id="blad" alt="blad">        <!-- Skar ut fire blader i Photoshop fra bildet hentet fra https://www.pexels.com/photo/boy-in-blue-and-green-zip-up-hooded-windbreaker-3147216/ -->
+          <img src="img/parralax/blad2.png" id="blad2" alt="blad2">
+          <img src="img/parralax/blad3.png" id="blad3" alt="blad3">
+          <img src="img/parralax/blad4.png" id="blad4" alt="blad4">
+        </div>
+        <div class="beskrivelse">
+          <p>Mossingan familiebarnehage eies og drives av Ann-Lisbeth Stavlund og Eva Høyem Anderssen. Barnehagen er en familiebarnehage, som vil si at en assistent kan ta imot fem barn i et privat hjem. Siden 2007 har barnehagen hatt godkjenning for tre barnegrupper.</p>
+          <p>Barnehagen er tilknyttet Mossing samdrift som driver med kjøtt-, melk- og kornproduksjon, og i 2007 ble det bygget et smådyrfjøs som barnehagen benytter seg av. Barnehagen har også flotte turområder i nærområdet, med skog, fjell og vann. Blant annet har vi et lavvo-område hvor det er satt opp en hytte med vedovn og en naturlekeplass laget i samarbeid med Høgskolen i Nord-Trøndelag (nå Nord universitet). I 2012 ble Mossingan familiebarnehage godkjent som lærlingebedrift i barne- og ungdomsarbeiderfaget. Den er også godkjent øvingslærerbarnehage for førskolelærerutdanningen ved Nord universitet.</p>
+        </div>
+        <div class="overskrift">
+          <h1>Vi elsker dyr</h1>
+        </div>
+        <div class="beskrivelse">
+          <p>Det å vokse opp med dyr kan ha flere gunstige effekter. Blant annet lærer barna å vise empati og ta hensyn, samtidig som de lærer om ansvar. Det er dessuten viktig å få et innblikk i hvor det vi spiser kommer fra, spesielt i dagens samfunn hvor det kastes så mye mat. For å bli bedre kjent med noen av dyrene våre, se <a href="dyr.html">«Våre dyr»</a>.</p>
+        </div>
+        <div class="overskrift">
+          <h1>Trygghet</h1>
+        </div>
+        <div class="beskrivelse">
+          <p>For oss i Mossingan familiebarnehage er trygghet en av de viktigste byggesteinene når det kommer til barns utvikling og livsmestring. Vi skaper nære og gode relasjoner til barna, slik at de føler seg trygge i våre omgivelser. På denne måten får barna muligheten til å utforske omverden og skape stabile, sosiale relasjoner. Trygghet er viktig for tilhørighet, noe som er grunnleggende for alle mennesker, også barn.</p>
+        </div>
+        <div class="overskrift">
+          <h1>Priser</h1>
+        </div>
+        <div class="beskrivelse">
+          <p>Under finner du en kalkulator med prisene til <a id="levanger" target="_blank" href="https://www.levanger.kommune.no/Tjenester-a-a/Skatter-og-avgifter/Offentlige-avgifter/Barnehage/?fbclid=IwAR2a81zwv9BZoR3qasEe78D4APJatcxrShugnMCyDUlQHeSEbQJfzUpAUvg">Levanger kommune</a>. Prisene er gjelder fra 1. august til 31. desember 2019. Ønsker du å ha flere barn i barnehagen, så tar også kalkulatoren hensyn til dette. Det gis søskenmoderasjon med 30 prosent for to barn, og 50 prosent for tre og flere barn. I tillegg kan du legge inn hvor mye du ønsker å ha barnet/barna i barnehagen i form av prosent.</p>
+        </div>
+      </div>
+      <div class="taskbox" id="kalkulator">
+        <h1>Priskalkulator</h1>
+        <select onchange="kalkuler()" id="antall_barn">
+          <option disabled selected hidden>Antall barn?</option>
+          <option value="1">1 barn</option>
+          <option value="2">2 barn</option>
+          <option value="3">3 barn</option>
+          <option value="4">4 barn</option>
+          <option value="5">5 barn</option></select>
+        <select onchange="kalkuler()" id="prosent">
+          <option disabled selected hidden>Hvor mange prosent?</option>
+          <option value="3040">100% plass</option>
+          <option value="2990">90% plass</option>
+          <option value="2940">80% plass</option>
+          <option value="2870">70% plass</option>
+          <option value="2800">60% plass</option>
+          <option value="2740">50% plass</option>
+          </select>
+        <select onchange="kalkuler()" id="mnd">
+          <option disabled selected hidden>Antall måneder?</option>
+          <option value="1">1 måned</option>
+          <option value="2">2 måneder</option>
+          <option value="3">3 måneder</option>
+          <option value="4">4 måneder</option>
+          <option value="5">5 måneder</option>
+          <option value="6">6 måneder</option>
+          <option value="7">7 måneder</option>
+          <option value="8">8 måneder</option>
+          <option value="9">9 måneder</option>
+          <option value="10">10 måneder</option>
+          <option value="11">11 måneder</option>
+          <option value="12">12 måneder</option>
+        </select>
+        <div class="resultat">
+          <input id="pris" type="text" readonly value="Huk av alternativene">
+        </div>
+      </div>
+      <div class="bokser_small">
+        <div class="våre_bokser"></div>
+      </div>
+    </div>
+    <div class="vår_footer"></div>
+    <script src="javascript/om-oss.js"></script>
+    <script src="javascript/kalkulator.js"></script>
+    <script src="javascript/essentials.js"></script>
+    <script src="javascript/parralax.js"></script>
+  </body>
+</html>

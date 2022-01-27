@@ -1,0 +1,131 @@
+/*aktivitet*/
+.kontaktBilde{
+    background-image: url("img/forsidebilde/min-side.jpg"); /*Bilde hentet fra https://www.pexels.com/nb-no/bilde/235965/*/
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    border-bottom: solid rgba(67, 50, 2, 0.5) 3px ;
+}
+.kontaktBilde h1{
+  margin: 20px;
+  margin-bottom: 3%;
+  margin-top: 10%;
+  color: white;
+}
+.kontaktBilde p{
+  margin: auto;
+  width: 65%;
+  margin-bottom: 3%;
+  color: white;
+}
+.aktivitetsboks {
+	position: relative;
+	overflow: hidden;
+	width: 65%;
+	height: auto;
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  margin: auto;
+  margin-bottom: 3%;
+  display: block;
+}
+.aktivitetsboks h1{
+  position: absolute;
+  z-index: 11;
+  font-size: 4vw;
+  margin: 0 auto;
+  left: 50%;
+  top: 50%;
+  -moz-transform: translate(-50%, -50%);                /*Bruker ulike tags foran transform for å støtte alle ulike browserne */
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  width: 60%;
+  color: white;
+  transition: 0.5s;
+}
+.aktivitetsboks img {
+	width: 100%;
+}
+.aktivitetsboks .bilde_av {
+	display: block;
+}
+.aktivitetsboks .aktivitets-info {
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.85);
+	color: #fff;
+	transition: all 0.4s ease-in-out 0s;
+}
+.aktivitetsboks:hover .aktivitets-info{
+	opacity: 1;
+}
+.aktivitetsboks:hover h1{
+  opacity: 0;
+  transition: 0.5s;
+}
+.aktivitetsboks .overskrift_om {
+  position: absolute;
+  top: 200px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: #FFFFFF;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.aktivitetsboks p{
+    text-align: center;
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-moz-transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-width:800px){
+  .kontaktBilde{
+    background-image: none;
+    background-color: white;
+  }
+  .aktivitetsboks{
+  width: 100vw;
+  }
+  .kontaktBilde .aktivitetsboks h1{
+    top:50%;
+    left: 25%;
+    color: white;
+  }
+  .kontaktBilde .aktivitetsboks .aktivitets-info p{
+    color: white;
+  }
+  .aktivitetsboks img {
+  	width: 50%;
+    position: relative;
+  }
+  .aktivitetsboks .aktivitets-info{
+    max-width: 50%;
+    opacity: 1;
+    position: absolute;
+    left: 50%;
+    color: #433202;
+  }
+  .kontaktBilde h1{
+    margin-top: 0;
+    color: black;
+  }
+  .kontaktBilde p{
+    font-size: 2.3vw;
+    color: black;
+  }
+}

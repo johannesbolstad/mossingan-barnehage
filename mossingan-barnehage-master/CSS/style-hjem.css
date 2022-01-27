@@ -1,0 +1,12 @@
+.forsidebilde{
+  background-image: url('img/forsidebilde/forside-desktop.jpg');   /* Endret bilde av Jennifer Murray fra Pexels - https://www.pexels.com/photo/photography-of-child-pushing-the-wagon-1067191/ */
+}
+@media screen and (max-width: 800px) {
+  .forsidebilde{
+    display: none;
+  }
+  #bakgrunn-mobil{
+    width: 100vw;
+    display: block;
+  }
+}

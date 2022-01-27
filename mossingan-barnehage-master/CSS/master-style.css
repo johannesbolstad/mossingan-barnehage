@@ -1,0 +1,416 @@
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Avenir", "Helvetica", sans-serif;          /* Dette er fonten som brukes i alle tekster som ikke er overskrift */
+}
+h1, h2{
+  font-family: "Kaushan Script", "Avenir", sans-serif;
+  color: #433202;
+}
+/* Ting som går igjen */
+.forsidebilde{                                      /* Brukes på veldig mange sider og vi legger den her for å gjøre css koden kortere*/
+  height: calc(85vh - 65px);                     /* Height skal her være 100vw - header height */
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  border-bottom: solid rgba(67, 50, 2, 0.5) 3px ;
+}
+.forsidebilde h1{
+  font-size: 12vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  z-index: 11;
+}
+.info-ramme {
+  background-color: white;
+  margin-bottom: 50px;
+}
+.info-ramme h1{
+  padding: 40px;
+  margin: auto;
+  text-align: center;
+  color: #433202;
+}
+.informasjon{
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  background-color: #fdfaf3;
+  max-width: 900px;
+  width: 90%;
+  margin: auto;
+}
+.informasjon p{
+  margin: 20px 20px 20px 20px;
+}
+.content-wrap{
+  border-bottom: solid #433202 3px;
+  margin-bottom: 20vh;                      /* Samme som footer height for å synligjøre footeren */
+  background-color: white;
+}
+.info-ramme a:link, .info-ramme a:visited{
+  color: #4f63f4;
+}
+.info-ramme a:hover{
+  color: #3d489b;
+}
+.taskbox{
+  background-color: #fdfaf3;
+  width: 90vw;
+  max-width: 400px;
+  height: 100vw;
+  max-height: 500px;
+  margin: auto;
+  border-radius: 10px;
+  border: 3px solid  #433202;
+}
+.taskbox h1{
+  top: 5%;
+  text-align: center;
+  color: #433202;
+  margin-top: 5%;
+  font-size: 2em;
+  display: block;
+  height: auto;
+}
+.resultat{
+  display: flex;
+  height: 10%;
+  width: 80%;
+  margin: auto;
+}
+/* Header section */
+header{
+  position: fixed;
+  width: 100vw;
+  height: 65px;
+  color: black;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  border-bottom: 3px solid #433202;
+  z-index: 100;
+}
+header nav{               /* Både nav og #meny-knapp skal ikke vises i desktop modus, men blir synlig når skjermen beveger seg over i en screen-width som samsvarer med de fleste telefoner.*/
+  display: none;
+}
+#meny-knapp{
+  display: none;
+}
+#headerLogo{
+  height: 120px;
+  margin-top: 5px;
+}
+#bakgrunn-mobil{
+  display: none;
+}
+.headerElement {
+  height: 100%;
+  margin: 0 20px 0 20px;
+}
+.headerElement::after{
+  content: '';
+  display: block;
+  height: 3px;
+  background: #eac26b;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+.headerElement:hover::after{
+  transform: scaleX(1);
+}
+.headerElement h1{
+  font-size: 25px;
+  color: #433202;
+  height: 100%;
+  font-weight: inherit;
+  line-height: 65px;                                /*Samme som header høyden for å sentrere teksten i header.*/
+}
+.headerdiv{
+  height: 65px;                                     /* Samme som header for å dytte divs ned ettersom headeren er fixed*/
+}
+/* Bokser */
+.box-container{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: white;
+}
+.container{                                       /* Lager konteinern til boksene*/
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: auto 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.container .box{                                    /* Lager en boks med */
+  position: relative;
+  min-width: 200px;
+  width: 400px;
+  max-width: 500px;
+  height: calc(300px - 30px);
+  float: left;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 20px;
+  background: #e67171;
+}
+.container .box .icon{                        /* Lager en ny boks vi kaller icon  somm legger seg utenpå den indre boksen, den er like stor og er den som vil forvandle seg til en sirkel når vi hover over den som vi ser i koden under den her */
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transition: 0.5s;
+  z-index: 1;
+  background: #dc5858;
+}
+.container .box:hover .icon{                /* Gjøres om boksen til en sirkel når vi hoover over */
+  top: 20px;
+  left: calc(50% - 40px);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+.container .box .icon .bilde{              /* Setter posisjonen til ikonet inne i icon boksen  i bo*/
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 140px;
+  height: auto;
+  transition: 0.5s;
+}
+.container .box:hover .icon .bilde{        /* Redefinerer størrelsen på ikonet inne i sirkelen som blir laget når hover */
+  width: 79px;
+  height: auto;
+}
+.container .box .content{
+  position: absolute;
+  top: 100%;
+  height: 100%;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: 0.5s;
+  opacity: 0;
+}
+.container .box:hover .content{
+  top: 35%;
+  opacity: 1;
+}
+.container .box .content h1{
+  color: white;
+  font-size: 25px;
+  margin: 0 0 0 0 ;
+}
+.container .box .content p{
+  color: white;
+  font-size: 1em;
+}
+.container:nth-child(2) .box .icon{       /* Setter ulik farge på boksene  ved bruk av nth-child*/
+  background: #7cb93b;
+}
+.container:nth-child(2) .box{
+  background: #afd784;
+}
+.container:nth-child(3) .box .icon{
+  background: #2E64FE;
+}
+.container:nth-child(3) .box{
+  background: #5882FA;
+}
+.container:nth-child(4) .box{
+  background: #e5c472;
+}
+.container:nth-child(4) .box .icon{
+  background: #f0c14b;
+}
+/* Små bokser */                                  /* Her definerer vi bredden på boksene når vi putter boksene i en div som heter små-bokser. På den måten kan vi styre hvor store boksene skal være avhengig av siden de er på. De vil for det meste være inne i en bokser-small utenom ved hjem siden*/
+.bokser_small .container{
+  width: 300px;
+}
+.bokser_small {
+  margin-top: 70px;
+}
+/* Footer section */
+footer {
+  position: fixed;
+  z-index: -1;
+  bottom: 0;
+  width: 100vw;
+  height: 20vh;
+  background: #6f695c;
+  color: white;
+  box-sizing: border-box; /* If we want to add a border around the footer (the border has been affected by the padding), we need this to make the footer border the same width as the rest of the body.*/
+  display: flex;
+  justify-content: center;
+}
+.footerElement{
+  height: 100%;
+  width: 20vw;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.footerElement:hover img{
+  height: 35%;
+  transition: 0.5s;
+}
+.footerElement img{
+  height: 25%;
+  padding: 5%;
+}
+.footerElement p{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+footer a{
+    color: white;
+    background: transparent;
+}
+
+/* Mobile responsive section */
+@media screen and (max-width: 800px) {          /* Styler enkelte seksjoner for mobil */
+  /* Ting som går igjen*/
+  .forsidebilde{
+    height: 50vh;
+  }
+  /* Header Section */
+  header, .headerdiv{
+    height: 90px;
+  }
+  .bildeElement{
+    left: 2%;
+    top: 0;
+    height: 100%;
+    width: auto;
+    margin: 0;
+  }
+  .bildeElement a{
+    width: 100%;
+  }
+   #headerLogo{
+     position: absolute;
+     height: 80%;
+     left: 5%;
+     top: 50%;
+     transform: translateY(-50%);
+     width: auto;
+     margin: 0;
+   }
+  .headerElement{
+   display: none;
+  }
+  header nav{
+   display: block;
+   position: absolute;
+   width: 100%;
+   height: calc(100vh - 90px);            /* Gjør headeren like høy som det rommet som er under headeren og ned til skjermbunnen.*/
+   background: rgba(255,255,255,0.95);
+   top: 92px;                            /* Samme som header høyden fordi nav skal komme etter header*/
+   right: -100%;
+   transition: 0.5s;
+  }
+  header nav.aktiv{
+    right: 0;
+  }
+  header nav ul{
+    display: block;
+    text-align: center;
+  }
+  header nav ul li h1{
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    height: calc(((100vh - 90px)/4));           /* Her beregner vi størrelsen på hvert element i mobil-menyen slik at de nøyaktig tar opp nøyaktig like mye plass av området under headeren*/
+    font-size: 2em;
+    color: rgb(67,50,2);
+    line-height: calc(((100vh - 90px)/4));
+  }
+  header nav ul li a{
+    height: 100%;
+    color: white;
+    display: block;
+  }
+  #meny-knapp{
+   width: 40px;
+   display: block;
+   position: absolute;
+   right: 5%;
+   top: 50%;
+   transform: translateY(-50%);
+  }
+  /* Bokser */
+  .container, .bokser_small .container{
+    width: 80vw;
+  }
+  .container .box .icon{
+    top: 20px;
+    left: calc(50% - 40px);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+  }
+  .container .box .icon .bilde{
+    width: 79px;
+    height: auto;
+  }
+  .container .box .content{
+    top: 35%;
+    opacity: 1;
+  }
+  /* Footer Section */
+  .content-wrap{
+    margin-bottom: 60vw;          /* Samme som footer Height for å synligjøre footeren*/
+  }
+  footer{
+    display: flex;
+    flex-direction: column;         /* Endrer footer elementene fra rad til kolonner */
+    height: 60vw;
+  }
+  footer a{
+    height: 100%;
+  }
+  footer .footerElement{
+    flex-direction: row;
+    height: 20%;
+    width: 100vw;
+    align-items: center;
+  }
+  footer .footerElement p{
+    flex: 4;
+    text-align: left;
+    max-height: 20%;
+  }
+  footer .footerElement img{
+    flex: 1;
+    padding: 0;
+    max-height: 60px;
+  }
+}
+@media screen and (max-width: 360px){
+  /* Bokser */
+  .content p{
+    display: none;                /* Hvis noen skulle ha en så small skjermstørrelse vil ikke teksten i boksene vises lenger */
+  }
+  .content{
+    width: 100%;
+    margin: auto;
+  }
+  /* Footer */
+  .footerElement p{
+    font-size: 0.8em;
+  }
+}

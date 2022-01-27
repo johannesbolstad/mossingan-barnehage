@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="no" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="CSS/style-dyr.css">
+    <link rel="stylesheet" href="CSS/master-style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kaushan+Script">
+    <link rel="shortcut icon" type="image/png" href="img/icons/favicon.png">
+    <title>Mossingan barnehage</title>
+  </head>
+  <body>
+    <div class="content-wrap">
+        <div class="vår_header"></div>
+
+        <div class="bakgrunn slideshow">
+        <div></div>
+        </div>
+        <div id ="bakgrunns-div">
+        <div id="dyre-div">
+          <div class="dyr-fremvisning">
+            <div class="navn"><h1>Pelle</h1><br></div>
+            <div class=om_dyr><p>Jeg heter Pelle og er en and. Jeg liker å bade med mine venner i dammen.</p></div>
+            <img src="img/bilder/and.jpg" alt="and">
+            <!-- Bildene til bildefremvisningen er hentet fra pixabay.com
+          url: https://pixabay.com/photos/mallard-duck-bird-nature-plumage-3478011/
+           --></div>
+
+          <div class="dyr-fremvisning">
+             <div class = "navn"><h1>Sprettlayla</h1></div>
+             <div class=om_dyr><p>Jeg heter Sprettlayla og jeg liker å hoppe og sprette rundt.</p></div>
+             <img src="img/bilder/sprettlayla.jpg" alt="sprettlayla">
+             <!-- Bildene til bildefremvisningen er hentet fra pixabay.com
+           url: https://pixabay.com/photos/lamb-sheep-farm-animal-countryside-451982/
+           --></div>
+
+          <div class="dyr-fremvisning">
+            <div class ="navn"><h1>Buddy</h1></div>
+            <div class=om_dyr><p>Jeg heter Buddy og jeg elsker å spise gulrøtter.</p></div>
+            <img src="img/bilder/kannin.jpg" alt="kannin">
+            <!-- Bildene til bildefremvisningen er hentet fra pixabay.com
+          url:https://pixabay.com/photos/lop-eared-rabbit-hare-animal-314881/
+          --></div>
+
+          <div class="dyr-fremvisning">
+            <div class="navn"><h1>Klara</h1></div>
+            <div class=om_dyr><p>Jeg heter Klara ku og er veldig snill. Jeg gir også melk til barnehagen.</p></div>
+            <img src="img/bilder/ku.jpg" alt="Ku">
+            <!-- Bildene til bildefremvisningen er hentet fra pixabay.com
+            url:https://pixabay.com/photos/cow-allg%C3%A4u-cows-ruminant-2782461/
+          --></div>
+          <span id="nesteBilde" onclick = "nesteBilde(1)">&#10095;</span>
+          <span id="forrigeBilde" onclick = "nesteBilde(-1)">&#10094;</span>
+        </div>
+      </div>
+      <div class="bokser_small">
+        <div class="våre_bokser"></div>
+      </div>
+    </div>
+    <div class="vår_footer"></div>
+    <script src="javascript/bildefremvisning.js"></script>
+    <script src="javascript/essentials.js"></script>
+  </body>
+</html>

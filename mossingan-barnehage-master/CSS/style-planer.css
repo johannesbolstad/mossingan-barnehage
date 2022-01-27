@@ -1,0 +1,28 @@
+/*Planer*/
+.forsidebilde{
+  background-image: url('img/forsidebilde/plan.jpeg');   /* Bilde av Pixabay hentet fra Pexels - https://www.pexels.com/nb-no/bilde/bokhylle-boker-forskning-informasjon-159621/ */
+}
+table, th, td{                                        /* Setter egenskaper til både tabell, tabell header og tabel data*/
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-collapse: collapse;
+    padding: 8px 10px;
+    background-color: #fdfaf3;
+}
+th{
+  background: #ADD8E6;
+  font-size: 2vw
+}
+td {
+  height: 50px;
+  width: calc(100%/6);
+}
+@media screen and (max-width: 800px){
+  table{
+    width: 100%;
+    height: 10vh;
+  }
+  td{
+    font-size: 1.5vw;
+    max-height: none;
+  }
+}

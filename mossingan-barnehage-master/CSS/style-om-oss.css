@@ -1,0 +1,165 @@
+/* Om oss section */
+.forsidebilde{
+  background-image: url("img/om-oss/om-oss.jpg"); /* Manipulerte bildet i photoshop så det ikke hadde blader i seg. Hentet fra https://www.pexels.com/photo/boy-in-blue-and-green-zip-up-hooded-windbreaker-3147216/ */
+}
+.overskrift{
+  height: calc(100vh - 65px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 9;
+  overflow: hidden;
+}
+.overskrift h1{
+  font-family: "Kaushan Script";
+  color: white;
+  font-size: 7em;
+  z-index: 11;
+  background-position: center;
+}
+#parralax{
+  position: relative;
+  overflow: hidden;
+  background-position: center top;
+}
+#blad{                                      /* Her bestemmer vi posisjonen til de ulike bladene som skal rotere rundt på nettsiden */
+  width: 200px;
+  left: -5%;
+  top: 10%;
+  position: absolute;
+  z-index: 10;
+}
+#blad2{
+  width: 150px;
+  left: 35%;
+  top: 10%;
+  position: absolute;
+  z-index: 10;
+}
+#blad3{
+  width: 150px;
+  left: 25%;
+  top: 30%;
+  position: absolute;
+  z-index: 10;
+}
+#blad4{
+  width: 300px;
+  left: 70%;
+  top: 55%;
+  position: absolute;
+  z-index: 10;
+}
+.beskrivelse{
+  padding: 50px;
+  box-sizing: border-box;
+  font-family: "consolas";
+  background-color: #fff;
+  z-index: 50;
+  position: relative;
+}
+.beskrivelse p{
+  font-size: 1.2em;
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+}
+.overskrift{
+  background-attachment: fixed;
+  background-position: center;
+  height: 70vh;
+}                                             /* Endrer bakgrunn på de ulike delene nedover */
+.overskrift:nth-child(3){
+  background-image: url("img/om-oss/vi-elsker-dyr.jpg");/* Hentet fra https://www.pexels.com/photo/girl-holding-white-rabbit-during-daytime-160933/ */
+}
+.overskrift:nth-child(5){
+  background-image: url("img/om-oss/trygghet.jpg"); /* Hentet fra https://www.pexels.com/photo/photo-of-children-playing-with-dry-leaves-1582736/ */
+}
+.overskrift:nth-child(7){
+  background-image: url("img/om-oss/priser.jpg"); /* Hentet fra https://www.pexels.com/photo/woman-writing-on-a-notebook-beside-teacup-and-tablet-computer-733856/*/
+}
+
+#levanger{
+  font-weight: bold;
+}
+#levanger:hover{
+  text-decoration: underline;
+}
+/*Kalkulator section */
+#kalkulator{
+  -webkit-box-shadow: 0px 2px 22px -4px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 2px 22px -4px rgba(0,0,0,0.75);
+  box-shadow: 0px 2px 22px -4px rgba(0,0,0,0.75);
+}
+#kalkulator select{
+  display: block;
+  background-color:#eac26b ;
+  outline: none;
+  color: #433202;
+  font-weight: bold;
+  width: 80%;
+  height: 15%;
+  border-radius: 4px;
+  border: none;
+  margin: auto;
+  margin: 5% auto 5% auto;
+  margin-top: 5%;
+  font-size: 1em;
+}
+
+#Kalkuler{
+  background-color: white;
+  border: 3px solid #bb903d;
+  text-align: center;
+  border-radius: 7px;
+  font-size: 1em;
+  flex: 2;
+  height: 100%;
+  margin-right: 5%;
+}
+#Kalkuler:hover{
+  background-color:#eac26b;
+  color: #F8F8FF;
+}
+#pris{
+  height: 100%;
+  border: 3px solid #bb903d;
+  border-radius: 7px;
+  text-align: center;
+  font-weight: bold;
+  flex: 1;
+  font-size: 1em;
+
+}
+
+@media screen and (max-width: 800px) {
+  /* Om oss */
+  .forsidebilde{
+    background-image: url("img/om-oss/om-oss-mobile.jpg");
+  }
+  .overskrift:nth-child(odd){
+    height: 50vh;
+  }
+  .overskrift h1{
+    font-size: 4em;
+  }
+  .beskrivelse p{
+    font-size: 1em;
+    padding: 0;
+  }
+  /* Kalkulator */
+  #kalkulator{
+    width: 80vw;
+  }
+  #pris{
+    font-size: 2.1vw;
+  }
+  #blad, #blad2, #blad3, #blad4{
+    display: none;
+  }
+}

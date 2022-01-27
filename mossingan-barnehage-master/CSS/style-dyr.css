@@ -1,0 +1,111 @@
+
+.content-wrap{
+  background-color: white;
+}
+#bakgrunns-div{
+  background-color: white;
+}
+
+/* Bildefremvisning*/
+#dyre-div{
+  width: 70%;
+  margin: auto;
+  position: relative;
+}
+.dyr-fremvisning h1{
+  color: white;
+}
+
+.dyr-fremvisning{
+  display: none;
+  -webkit-animation-name: minfremvisning;
+  -webkit-animation-duration: 2s;
+  animation-name: minfremvisning;
+  animation-duration: 2s;
+}
+
+.dyr-fremvisning img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.om_dyr{
+  position: absolute;
+  top: 75%;
+  left:5%;
+  font-family: "Kaushan Script";
+  font-size: 2em;
+  font-weight: bold;
+  color: white;
+}
+
+/* Animasjon til Bildefremvisningen. */             /*Her bruker vi to ulike keyframes for støtte til flere browsere */
+@-webkit-keyframes minfremvisning{
+  from {opacity: 0.3}
+  to {opacity: 1}
+}
+
+@keyframes minfremvisning {
+  from {opacity: 0.3}
+  to {opacity: 1}
+}
+
+/*/* Knappene som representerer neste og forrige bilde */
+#nesteBilde, #forrigeBilde{
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+  padding: 30px;
+  font-weight: bold;
+  margin-top: -70px;
+  font-size: 50px;
+  transition: 0.9s ease;
+  user-select: none;
+  border-radius: 0 25px 25px 0;
+  color: white;
+}
+
+#nesteBilde{
+  right: 0;
+  border-radius: 25px 0 0 25px;
+}
+
+#nesteBilde:hover, #forrigeBilde:hover{
+  background-color: black;
+}
+
+/* Diven som viser navn på dyrene */
+.navn{
+  font-family: "Kaushan Script";
+  color: white;
+  font-size: 3vw;
+  position: absolute;
+  top: 0;
+  padding: 50px 40px;
+}
+
+/* Kryper knappene til bildefremvisningen for width under 600px*/
+@media screen and (max-width: 600px) {
+  #nesteBilde{
+    padding:10px;
+    border-radius:10px 0 0 10px;
+    margin-top: -20px;
+    font-size: 25px;
+  }
+  #forrigeBilde{
+    padding: 10px;
+    border-radius: 0 10px 10px 0;
+    margin-top: -20px;
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #dyre-div{
+    width: 100%;
+  }
+  .om_dyr{
+    top:70%;
+    font-size: 1em;
+  }
+}
